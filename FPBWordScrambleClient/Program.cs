@@ -70,27 +70,41 @@ namespace FPBWordScrambleClient
             }
             catch (FaultException<WordScrambleExceptionsGameBeingHostedException> e)
             {
-                Console.WriteLine("The application terminated with an error.");
-                Console.WriteLine($"ERROR: {e.Detail.HostMessage.ToString()}");
-                
+                Console.WriteLine("The application terminated with an error.");             
+                Console.WriteLine("Error Message: {0}", e.Detail.HostMessage);
+                Console.ReadLine();
+
             }
             catch (FaultException<WordScrambleExceptionsGameIsNotBeingHostedException> ex)
             {
                 Console.WriteLine("The application terminated with an error.");
-                Console.WriteLine($"ERROR: {ex.Detail.NonHostMessage.ToString()}");
-                
+                Console.WriteLine("Error Message: {0}", ex.Detail.NonHostMessage);
+                Console.ReadLine();
+
             }
             catch (FaultException<WordScrambleExceptionsHostCannotJoinTheGameException> ex)
             {
-                Console.WriteLine($"ERROR: {ex.Detail.HostJoinMessage}");
+               
+                Console.WriteLine("The application terminated with an error.");
+                Console.WriteLine("Error Message: {0}", ex.Detail.HostJoinMessage);
+                Console.ReadLine();
+
             }
             catch (FaultException<WordScrambleExceptionsMaximumNumberOfPlayersReachedException> ex)
             {
-                Console.WriteLine($"ERROR: {ex.Detail.MaxPlayersMessage}");
+               
+                Console.WriteLine("The application terminated with an error.");
+                Console.WriteLine("Error Message: {0}", ex.Detail.MaxPlayersMessage);
+                Console.ReadLine();
+
             }
             catch (FaultException<WordScrambleExceptionsPlayerNotPlayingTheGameException> ex)
             {
-                Console.WriteLine($"ERROR: {ex.Detail.PlayerNotPlaying}");
+             
+                Console.WriteLine("The application terminated with an error.");
+                Console.WriteLine("Error Message: {0}", ex.Detail.PlayerNotPlaying);
+                Console.ReadLine();
+
             }
         }
     }

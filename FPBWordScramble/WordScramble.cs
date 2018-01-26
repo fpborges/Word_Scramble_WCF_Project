@@ -49,8 +49,7 @@ namespace FPBWordScramble
               
                 fault.HostMessage = "Game is already being hosted";
                 throw new FaultException<GameBeingHostedException>(fault);
-
-                
+              
             }
             else
             {
