@@ -9,7 +9,7 @@ using System.ServiceModel;
 /*Fernando Pereira Borges
  * Student id: 7258262
  * Assignment 3 & 4
- * Purpose: Create a multiplayer scramble game
+ * Purpose: Create a multiplayer scramble gamed
  * */
 
 
@@ -70,14 +70,14 @@ namespace FPBWordScrambleClient
             }
             catch (FaultException<WordScrambleExceptionsGameBeingHostedException> e)
             {
-                Console.WriteLine("The application terminated with an error.");             
+                Console.WriteLine("The application terminated with an error!");             
                 Console.WriteLine("Error Message: {0}", e.Detail.HostMessage);
                 Console.ReadLine();
 
             }
             catch (FaultException<WordScrambleExceptionsGameIsNotBeingHostedException> ex)
             {
-                Console.WriteLine("The application terminated with an error.");
+                Console.WriteLine("The application terminated with an error!");
                 Console.WriteLine("Error Message: {0}", ex.Detail.NonHostMessage);
                 Console.ReadLine();
 
@@ -85,7 +85,7 @@ namespace FPBWordScrambleClient
             catch (FaultException<WordScrambleExceptionsHostCannotJoinTheGameException> ex)
             {
                
-                Console.WriteLine("The application terminated with an error.");
+                Console.WriteLine("The application terminated with an error!");
                 Console.WriteLine("Error Message: {0}", ex.Detail.HostJoinMessage);
                 Console.ReadLine();
 
@@ -93,7 +93,7 @@ namespace FPBWordScrambleClient
             catch (FaultException<WordScrambleExceptionsMaximumNumberOfPlayersReachedException> ex)
             {
                
-                Console.WriteLine("The application terminated with an error.");
+                Console.WriteLine("The application terminated with an error!");
                 Console.WriteLine("Error Message: {0}", ex.Detail.MaxPlayersMessage);
                 Console.ReadLine();
 
@@ -101,7 +101,7 @@ namespace FPBWordScrambleClient
             catch (FaultException<WordScrambleExceptionsPlayerNotPlayingTheGameException> ex)
             {
              
-                Console.WriteLine("The application terminated with an error.");
+                Console.WriteLine("The application terminated with an error!");
                 Console.WriteLine("Error Message: {0}", ex.Detail.PlayerNotPlaying);
                 Console.ReadLine();
 
